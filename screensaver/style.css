@@ -1,0 +1,353 @@
+:root {
+    --main-color: #79ecc6;
+    --circle-color: white;
+    --size-to: 300px;
+}
+
+body {
+    margin: 0;
+    align-items: center;
+    position: fixed;
+
+}
+
+#gradient {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+  	background-image: Linear-gradient(180deg, rgb(105, 229, 212),	hsl(340, 35%, 70%));
+}
+
+.fade-in {
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.circle {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 3px; left: 290px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 50%;
+      transition: 0.2s ease-out;
+}
+
+.circle:hover {
+  opacity: 100%;
+}
+
+.circle2 {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 200px; left: 550px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 50%;
+  transition: 0.5s ease-out;
+}
+
+.circle2:hover{
+  opacity: 100%;
+}
+
+
+.circle3 {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 3px; left: 820px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 50%;
+  transition: 0.5s ease-out;
+
+}
+
+.circle3:hover {
+  opacity: 100%;
+}
+
+
+
+
+.circle__el {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 5px solid var(--circle-color);
+    border-radius: 60%;
+    animation: go 5s ease-out infinite;
+    transition: 0.2s ease-out;
+    transition-duration: infinite;
+
+}
+
+.circle__el:hover {
+  background: white;
+  opacity: 100%;
+
+}
+
+.circle__el_two {
+    animation-delay: 0.3s;
+}
+
+.circle__el_two:hover {
+  background: white;
+  opacity: 100%;
+}
+
+.circle__el_three {
+    animation-delay: .3s;
+}
+.circle__el_three:hover {
+  background: white;
+  opacity: 100%;
+}
+
+@keyframes go {
+    100% {
+    	width: var(--size-to);
+      height: var(--size-to);
+      box-shadow: 0 0 55px pink;
+      opacity: 0;
+    }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/*!------>OTHER CSS<------!*/
+
+.animation-container {
+	display: block;
+	position: relative;
+	width: 800px;
+	max-width: 100%;
+	margin: 0 auto;
+
+
+			&.white {
+				background-color: white;
+				box-shadow: 0px 50px 50px 0px transparentize(white, 0.7);
+			}
+
+			&.red {
+				background-color: #fc7171;
+				box-shadow: 0px 50px 50px 0px transparentize(#fc7171, 0.7);
+				animation-delay: 0.2s;
+			}
+		}
+
+
+
+	.boom-container {
+		position: absolute;
+		display: flex;
+		width: 80px;
+		height: 80px;
+		text-align: center;
+		align-items: center;
+		transform: translateY(-50%);
+    left: 200px;
+    top: -145px;
+
+		.shape {
+			display: inline-block;
+			position: relative;
+			opacity: 0;
+			transform-origin: center center;
+
+			&.circle1 {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				transform-origin: 50% 80%;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-iteration-count: infinite;
+				margin-left: -15px;
+				border-width: 0 2.5px 5px 2.5px;
+				border-color: transparent transparent #42e599 transparent;
+				animation-name: boom-circle1;
+
+				&.big {
+					margin-left: -25px;
+					border-width: 0 5px 10px 5px;
+					border-color: transparent transparent #fade28 transparent;
+					animation-name: boom-circle1-big;
+				}
+			}
+
+			&.disc {
+				width: 8px;
+				height: 8px;
+				border-radius: 100%;
+				background-color: #d15ff4;
+				animation-name: boom-disc;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-iteration-count: infinite;
+			}
+
+			&.circle {
+				width: 20px;
+				height: 20px;
+				animation-name: boom-circle;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-iteration-count: infinite;
+				border-radius: 100%;
+				margin-left: -30px;
+
+				&.white {
+					border: 1px solid white;
+				}
+
+				&.big {
+					width: 40px;
+					height: 40px;
+					margin-left: 0px;
+
+					&.white {
+						border: 2px solid white;
+					}
+				}
+			}
+
+			&:after {
+				background-color: rgba(178, 215, 232, 0.2);
+			}
+		}
+
+		.shape {
+			&.circle1, &.circle, &.circle.big, &.disc {
+				animation-delay: .38s;
+				animation-duration: 3s;
+			}
+
+			&.circle {
+				animation-delay: 0.6s;
+			}
+		}
+
+		&.second {
+			left: 485px;
+			top: 155px;
+			.shape {
+				&.circle1, &.circle, &.circle.big, &.disc {
+					animation-delay: 1.9s;
+				}
+				&.circle {
+					animation-delay: 2.15s;
+				}
+			}
+		}
+}
+
+@keyframes boom-circle {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+		transform: scale(3);
+	}
+	100% {
+	}
+}
+
+@keyframes boom-circle1-big {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 0;
+		transform: scale(9.5) translate(50px, -50px) rotate(360deg);
+	}
+	100% {
+	}
+}
+
+@keyframes boom-circle1 {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 0;
+		transform: scale(3) translate(20px, 40px) rotate(360deg);
+	}
+
+	100% {
+	}
+}
+
+@keyframes boom-disc {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+		transform: scale(2) translate(-70px, -30px);
+	}
+	100% {
+
+	}
+}
+
+@keyframes pulse {
+0% {
+
+  background: rgb(153, 146, 99);
+}
+10% {
+  background:rgb(236,157,184);
+}
+50% {
+  background:rgb(105,165,228);
+}
+  100% {
+
+    background: rgb(255,236,112);
+  }
+}
