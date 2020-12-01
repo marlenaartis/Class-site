@@ -1,71 +1,48 @@
-<!DOCTYPE html>
-  <html>
-  <head>
-  <style>
-  .flex-container1 {
-    display: flex;
-    align-items: stretch;
-    background-color: green;
-  }
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+  background-color: #ffa64d; /* Green background */
+  border: 1px solid black; /* Green border */
+  color: white; /* White text */
+  padding: 20px 34px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
 
-  .flex-container1 > div {
-    background-color: grey;
-    color: white;
-    margin: 3px;
-    text-align: center;
-    line-height: 110px;
-    font-size: 30px;
-  }
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
 
-  .flex-container1 > div2 {
-    background-color: grey;
-    color: white;
-    margin: 5px;
-    text-align: center;
-    line-height: 650px;
-    font-size: 30px;
-  }
+/* Add a background color on hover */
 
-  .center {
-    margin: auto;
+.button1:hover {
+  background-color: #4CAf50;
+  color: white;
+}
 
-  }
-  .flex-container8 {
-    display: flex;
-    flex-direction: column;
-    background-color: DodgerBlue;
-  }
-  .flex-container8 > div {
-    background-color: #f1f1f1;
-  width: 100px;
-  margin: 5px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  }
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
 
-  </style>
-  </head>
-  <body>
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+</style>
+<body>
 
-  <div class="flex-container1">
-    <div style="flex-grow: 3">1</div>
-    <div style="flex-grow: 3">2</div>
-    <div style="flex-grow: 3">3</div>
-  </div>
-
-<div2 class="flex-container1">
-  <div2 style="flex-grow: 1">1</div2>
-
-<div class="flex-container8">
-  <div style="flex-grow: 1">1</div>
-  <div style="flex-grow: 1">2</div>
-  <div style="flex-grow: 1">3</div>
+<h1>An Interview with Terrifying Jellyfish</h1>
 
 
-  </div>
+<div class="btn-group">
+  <button onclick="document.location='Prelude.html'"; class="button button1">Prelude</button>
+  <button onclick="document.location='Conversation.html'"; class="button button2">Conversation</button>
+  <button onclick="document.location='Some Things.html'"; class="button button3">Some Things</button>
+</div>
 
 
-
-  </body>
-  </html>
+</body>
+</html>
