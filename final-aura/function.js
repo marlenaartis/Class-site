@@ -2,24 +2,13 @@ $( function() {
   $( ".draggable").draggable();
 });
 
-function changeImage() {
-
-    if (document.getElementById("drag-2").src == "aura6.jpg")
-    {
-(document.getElementById("drag-2").src = "aura012.jpg")
-    }
-    else
-    {
-        document.getElementById("drag-2").src = "aura012.jpg";
-    }
-}
 
 // Drifter
 // ---------------------------------------------
 function makeNewPosition(){
   // Get viewport dimensions (remove the dimension of the div)
-  var h = $(document).height() - 50;
-  var w = $(document).width() - 50;
+  var h = $(document).height() - 5;
+  var w = $(document).width() - 5;
 
   var nh = Math.floor(Math.random() * h);
   var nw = Math.floor(Math.random() * w);
@@ -32,16 +21,17 @@ function animateDiv(myclass){
   var oldq = $('.drifter').offset();
   var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-  $(myclass).animate({ top: newq[0], left: newq[1] }, speed, function(){
+  $(myclass).animate({ top: newq[1], left: newq[0] }, speed, function(){
     animateDiv(myclass);
+
   });
 }
 
 function calcSpeed(prev, next) {
   var x = Math.abs(prev[1] - next[1]);
-  var y = Math.abs(prev[0] - next[0]);
+  var y = Math.abs(prev[1] - next[0]);
   var greatest = x > y ? x : y;
-  var speedModifier = 0.07;
+  var speedModifier = 0.02;
   var speed = Math.ceil(greatest/speedModifier);
   return speed;
 }
@@ -68,7 +58,52 @@ $( document ).ready(function() {
   type:'inline',
   midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
-animateDiv('.float-a');
+    animateDiv('.float-a');
     animateDiv('.float-b');
     animateDiv('.float-c');
+    animateDiv('.float-d');
+    animateDiv('.float-e');
+    animateDiv('.float-f');
+    animateDiv('.float-g');
+    animateDiv('.float-h');
+    animateDiv('.float-i');
+    animateDiv('.float-j');
+    animateDiv('.float-k');
+    animateDiv('.float-l');
+    animateDiv('.float-m');
+    animateDiv('.float-n');
+    animateDiv('.float-o');
+    animateDiv('.float-p');
+    animateDiv('.float-q');
+    animateDiv('.float-r');
+    animateDiv('.float-s');
+    animateDiv('.float-t');
+      animateDiv('.float-u');
+      animateDiv('.float-v');
+      animateDiv('.float-w');
+      animateDiv('.float-x');
+      animateDiv('.float-y');
+      animateDiv('.float-z');
+      animateDiv('.float-aa');
+      animateDiv('.float-ab');
+      animateDiv('.float-ac');
+      animateDiv('.float-ad');
+      animateDiv('.float-ae');
+      animateDiv('.float-af');
+      animateDiv('.float-ag');
+      animateDiv('.float-ah');
+      animateDiv('.float-ai');
+      animateDiv('.float-aj');
+      animateDiv('.float-ak');
+      animateDiv('.float-al');
+      animateDiv('.float-am');
+      animateDiv('.float-an');
+      animateDiv('.float-ao');
+      animateDiv('.float-ap');
+      animateDiv('.float-aq');
+      animateDiv('.float-ar');
+      animateDiv('.float-as');
+      animateDiv('.float-at');
+
+
 });

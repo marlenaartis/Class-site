@@ -1,9 +1,42 @@
-body {
-  background-color: #ccccb3;
+html, body, div, span, canvas { margin:0; padding:0; }
+
+
+#container {
+  overflow:hidden;
+  position:absolute;
   display: grid;
+  height: 100%;
+  width: 100%;
+  background:-o-linear-gradient(top, #21241b, #424734);
+	background:-ms-linear-gradient(top, #21241b, #424734);
+	background:-moz-linear-gradient(top, #21241b, #424734);
+	background:-webkit-linear-gradient(top, #21241b, #424734);
+ 	background:linear-gradient(top, #21241b, #424734);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7');
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')";
+  background-size: cover;
+}
+img {
+  border-radius: 50%
+  /* position:relative; 
+  z-index:-1; */
+}
+
+/* .drifter {
+  border-radius: 50%; 
+  overflow: hidden;
+  box-shadow: inset 0px 0px 19px 5px #000000;
+} */
+
+
+#pixie {
+  z-index:10;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #headerPopup{
-  width:75%;
+  width:50%;
   margin:0 auto;
 }
 
@@ -12,13 +45,24 @@ body {
   margin:0 auto;
 }
 
+p.quote1 {
+  font-style: oblique;
+  font-size: 30px;
+   font-family: 'Darker Grotesque';
+}
+
+#quote1 {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+}
+
 #drag-1 {
     position:absolute;
    top: 4680px;
    right: 3500px;
   border: 0px;
   padding: 0%;
-
 }
 
 #drag-2 {
@@ -28,13 +72,13 @@ body {
   border-radius: 0;
   padding: 0%;
 }
-
 #drag-3 {
   position: absolute;
  top: 1730px;
  left: 2710px;
   border-radius: 0;
   padding: 0%;
+
 }
 
 #drag-4 {
@@ -43,6 +87,7 @@ body {
   left: 2480px;
   border-radius: 0;
   padding: 0%;
+
 }
 
 
@@ -50,84 +95,87 @@ body {
   position: absolute;
  top: 3180px;
  left: 750px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-6 {
   position: absolute;
  top: 1680px;
  right: 650px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-7 {
   position: absolute;
  top: 5980px;
  right: 1750px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-8 {
   position: absolute;
  top: 780px;
  left: 350px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-9 {
   position: absolute;
  top: 180px;
  left: 1695px;
-  border-radius: 0;
+
   padding: 0%;
+  animation-name: fade-in;
+  animation-duration: 10s;
+  animation-iteration-count: infinite
 }
 #drag-10 {
   position: absolute;
  top: 3880px;
  left: 1330px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-11 {
   position: absolute;
  top: 5580px;
  left: 2623px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-12 {
   position: absolute;
  top: 1300px;
  right: 744px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-13 {
   position: absolute;
  top: 1576px;
  right: 4193px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-14 {
   position: absolute;
  top: 2201px;
  left: 1750px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-15 {
   position: absolute;
  top: 1121px;
  left: 1933px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-16 {
   position: absolute;
  top: 1234px;
  left: 1499px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-17 {
@@ -141,35 +189,35 @@ body {
   position: absolute;
  top: 3902px;
  left: 2050px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-19 {
   position: absolute;
  top: 1340px;
  left: 2211px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-20 {
   position: absolute;
  top: 2180px;
  right: 429px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-21 {
   position: absolute;
  top: 352px;
  right: 390px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-22 {
   position: absolute;
  top: 3428px;
  left: 2723px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-23 {
@@ -183,21 +231,21 @@ body {
   position: absolute;
  top: 2318px;
  right: 42px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-25 {
   position: absolute;
  top: 844px;
  left: 450px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-26 {
   position: absolute;
  top: 119px;
  left: 642px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-27 {
@@ -218,61 +266,251 @@ body {
   position: absolute;
  top: 5174px;
  left: 828px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-30 {
   position: absolute;
  top: 5482px;
  left: 115px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-31 {
   position: absolute;
  top: 1269px;
  right: 533px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-32 {
   position: absolute;
  top: 753px;
  left: 1482px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-33 {
   position: absolute;
  top: 4829px;
  left: 820px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-34 {
   position: absolute;
  top: 2355px;
  right: 900px;
-  border-radius: 0;
+
   padding: 0%;
 }
 #drag-35 {
   position: absolute;
  top: 3290px;
  right: 1294px;
-  border-radius: 0;
+
   padding: 0%;
 }
 
+.opacity2 {
+  opacity: 0;
+  transition: 8s;
+}
+
+.opacity2:hover {
+  opacity: 1;
+}
+
+div.fade {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+div.fade2 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+div.fade3 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+div.fade4 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 3.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade5 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 4.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade6 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 2.4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade7 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 5.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade8 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 4.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade9 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 4.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade10 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade11 {
+  width: 700px;
+  height: 700px;
+  animation-name: standardfade;
+  animation-duration: 3.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade12 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 4.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade13 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 3.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade14 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade15 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 4.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade16 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 2.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade17 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 5.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade18 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 4.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade19 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 3.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
+div.fade20 {
+  width: 700px;
+  height: 700px;
+  animation-name: reversefade;
+  animation-duration: 4.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    animation-timing-function: linear;
+}
 
 
-
-
-
-
-div.image1{
-  position: absolute;
-
-  width: 0px;
-  border: 0px;
+@keyframes standardfade {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes reversefade {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
 }
