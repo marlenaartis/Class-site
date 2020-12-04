@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>BiPOCLiFE Simulator</title>
+<!---Required meta tags ---->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+
+
+<body>
+  <div class="loadingpage">
+  <img src="loading.jpg" alt="Loading">
+</div>
+<div class="titlepage">
+  <img src="title.jpg" alt="Title Page">
+  </div>
+<div class="warningpage">
+  <img src="warning.jpg" alt="Warning Page">
+  </div>
+
+
+  <!-- Trigger the modal with a button -->
+  <div class="button">
+  <button type="button" class="myButton" id="myBtn">Start Game
+  </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><strong>Error</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>We're sorry about that, it looks like there was an error loading this game.</p>
+          <p>Click the button below to report the issue.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal("show");
+  });
+  $("#myModal").on('hidden.bs.modal', function(){
+    alert('The modal is now hiddjcsdjfdsien.');
+  });
+});
+</script>
+</body>
+  </html>

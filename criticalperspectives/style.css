@@ -1,0 +1,109 @@
+  body {
+  background-color: #e53100;
+  overflow: hidden;
+}
+img {
+  display: flex;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+  overflow: hidden;
+}
+
+.myButton {
+	-moz-box-shadow: -4px 5px 8px -5px #8a2a21;
+	-webkit-box-shadow: -4px 5px 8px -5px #8a2a21;
+	box-shadow: -4px 5px 8px -5px #8a2a21;
+	background-color:#eb3626;
+	-webkit-border-radius:24px;
+	-moz-border-radius:24px;
+	border-radius:24px;
+	border:2px solid #ebd700;
+	display:block;
+	cursor:pointer;
+	color:#f0e518;
+	font-family:Verdana;
+	font-size:24px;
+	font-weight:bold;
+  padding: 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #691e11;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.myButton:hover {
+	background-color:#eb7773;
+}
+.myButton:active {
+	top:1px;
+}
+
+div.loadingpage {
+  animation-name: fadeinout;
+  animation-duration: 4.5s;
+  animation-fill-mode: both;
+  animation-direction: forwards;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+}
+
+div.titlepage {
+  animation-name: fadeinout;
+  animation-duration: 2.8s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  animation-direction: forwards;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+}
+
+div.warningpage {
+  animation-name: fadeinout;
+  animation-duration: 3.5s;
+  animation-delay: 8.5s;
+  animation-fill-mode: both;
+  animation-direction: forwards;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+}
+div.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: button;
+  animation-duration: .5s;
+  animation-delay: 13s;
+  animation-fill-mode: both;
+  animation-direction: forwards;
+  position: absolute;
+  z-index:1;
+  overflow: hidden;
+  top: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes button {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fadeinout {
+  0% {opacity: 0;}
+  8% {opacity: 1;}
+  92% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .button {
+    width: 100%;
+  }
+}

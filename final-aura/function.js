@@ -2,7 +2,9 @@ $( function() {
   $( ".draggable").draggable();
 });
 
-
+$(document).delegate("div", "click", function() {
+   window.location = $(this).find("a").attr("href");
+});
 // Drifter
 // ---------------------------------------------
 function makeNewPosition(){
