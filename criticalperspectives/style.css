@@ -64,7 +64,7 @@ div.titlepage {
 
 div.warningpage {
   animation-name: fadeinout;
-  animation-duration: 6.1s;
+  animation-duration: 6.6s;
   animation-delay: 8.5s;
   animation-fill-mode: both;
   animation-direction: forwards;
@@ -78,7 +78,7 @@ div.button {
   align-items: center;
   animation-name: button;
   animation-duration: .5s;
-  animation-delay: 16s;
+  animation-delay: 18s;
   animation-fill-mode: both;
   animation-direction: forwards;
   position: absolute;
