@@ -64,7 +64,7 @@ div.titlepage {
 
 div.warningpage {
   animation-name: fadeinout;
-  animation-duration: 3.5s;
+  animation-duration: 4.5s;
   animation-delay: 8.5s;
   animation-fill-mode: both;
   animation-direction: forwards;
